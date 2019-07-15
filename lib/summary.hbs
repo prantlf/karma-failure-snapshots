@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <title>Failure Snapshots</title>
+  <style>
+    h1 { font-size: 150% }
+    h2 { font-size: 120% }
+    .failure h2 { color: darkred }
+    .pass h2 { color: darkgreen }
+  </style>
+</head>
+<body>
+  <h1>Failure Snapshots</h1>
+
+{{#each failures}}
+  <section class="{{#if failure}}failure{{else if pass}}pass{{else}}{{/if}}">
+    <h2>{{description}}</h2>
+    <pre>{{stack}}</pre>
+    <p>See the <a href="snapshots/{{number}}.html">snapshot</a>
+       and the <a href="snapshots/{{number}}.png">screenshot</a>.</p>
+  </section>
+
+{{/each}}
+</body>
+</html>

@@ -1,0 +1,4 @@
+.DS_Store
+example/test-*/failures
+node_modules
+npm-debug.log

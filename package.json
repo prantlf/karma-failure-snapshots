@@ -1,0 +1,43 @@
+{
+  "name": "karma-failure-snapshots",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "description": "Karma plugin for taking snapshots of the web browser whenever a test fails.",
+  "license": "MIT",
+  "author": {
+    "name": "Ferdinand Prantl",
+    "email": "prantlf@gmail.com",
+    "url": "https://github.com/prantlf"
+  },
+  "keywords": [
+    "karma-plugin",
+    "karma-adapter",
+    "snapshots",
+    "screenshots"
+  ],
+  "homepage": "https://github.com/prantlf/karma-failure-snapshots",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prantlf/karma-failure-snapshots"
+  },
+  "bugs": {
+    "url": "https://github.com/prantlf/karma-failure-snapshots/issues"
+  },
+  "github": "https://github.com/prantlf/karma-failure-snapshots",
+  "files": [
+    "lib",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "standard --fix --verbose"
+  },
+  "dependencies": {
+    "handlebars": "4.1.2",
+    "html2canvas": "1.0.0-rc.3"
+  },
+  "devDependencies": {
+    "fs-extra": "8.1.0",
+    "standard": "13.0.2"
+  }
+}
