@@ -100,7 +100,7 @@ The plugin supports a few options to customize the location to save the snapshot
 
 ## Writing Tests
 
-Usually you will not need to modify your tests. The snapshots will just be taken, once a test spec fails or throws an unexpected error. For example, a typical test using `mocha` with a set-up and tear-down phases.
+Usually you will not need to modify your tests. The snapshots will just be taken, once a test spec fails or throws an unexpected error. For example, a typical test using `mocha` with set-up and tear-down phases.
 
     describe('test suite', function () {
       before(function () {
@@ -118,7 +118,7 @@ Usually you will not need to modify your tests. The snapshots will just be taken
       ...
     })
 
-The automatic snapshot taking is using the `afterEach` hook of the particular unit test framework. If you implement this hook and perform a page clean-up, which would remove content important for inspection, the snapshot will be taken after your clean-up and thus not useful:
+The automatic snapshot taking is using the `afterEach` hook of the particular unit test framework. If you implement this hook and perform a page clean-up, which would remove content important for inspection, the snapshot will be taken after your clean-up and thus not be useful:
 
     describe('test suite', function () {
       beforeEach(function () {
@@ -232,5 +232,6 @@ Licensed under the MIT license.
 [Jasmine]: https://jasmine.github.io/
 [QUnit]: https://qunitjs.com/
 [Handlebars]: https://handlebarsjs.com/
-[built-in page]: https://github.com/prantlf/karma-failure-snapshots/blob/master/[sample project]: https://github.com/prantlf/karma-failure-snapshots/blob/master/example
+[built-in page]: https://github.com/prantlf/karma-failure-snapshots/blob/master/
+[example]: https://github.com/prantlf/karma-failure-snapshots/blob/master/example
 [mocha plugin]: https://github.com/prantlf/karma-failure-snapshots-mocha/blob/master/lib/adapter.js
