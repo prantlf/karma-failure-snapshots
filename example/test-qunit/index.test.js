@@ -7,6 +7,8 @@ function crash () {
 QUnit.module('answerEverything', function (hooks) {
   var element, answer
 
+  hooks.afterEach(window.ensureFailureSnapshot)
+
   hooks.before(function () {
     element = document.createElement('p')
     document.body.appendChild(element)
@@ -17,8 +19,6 @@ QUnit.module('answerEverything', function (hooks) {
   hooks.after(function () {
     document.body.removeChild(element)
   })
-
-  hooks.afterEach(window.ensureFailureSnapshot)
 
   QUnit.test('answers', function (assert) {
     assert.ok(typeof answer === 'string' || answer instanceof String, 'Answer must exist')
