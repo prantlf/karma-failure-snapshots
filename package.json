@@ -1,6 +1,6 @@
 {
   "name": "karma-failure-snapshots",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "lib/index.js",
   "description": "Karma plugin for taking snapshots of the web browser whenever a test fails.",
   "license": "MIT",
