@@ -33,11 +33,11 @@
     "test": "standard --fix --verbose"
   },
   "dependencies": {
-    "handlebars": "4.1.2",
+    "handlebars": "4.3.0",
     "html2canvas": "1.0.0-rc.3"
   },
   "devDependencies": {
     "fs-extra": "8.1.0",
-    "standard": "13.0.2"
+    "standard": "14.3.1"
   }
 }
