@@ -5,7 +5,7 @@ function crash () {
 }
 
 QUnit.module('answerEverything', function (hooks) {
-  var element, answer
+  let element, answer
 
   hooks.afterEach(window.ensureFailureSnapshot)
 

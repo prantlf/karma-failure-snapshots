@@ -6,7 +6,7 @@ function crash () {
 
 describe('answerEverything', function () {
   beforeAll(function () {
-    var element = document.body
+    const element = document.body
     window.answerEverything(element)
     this.answer = element.textContent
   })

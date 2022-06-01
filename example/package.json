@@ -14,18 +14,18 @@
   "author": "Ferdinand Prantl <prantlf@gmail.com> (http://prantl.tk/)",
   "license": "MIT",
   "devDependencies": {
-    "chai": "4.2.0",
-    "jasmine-core": "3.4.0",
-    "karma": "4.2.0",
+    "chai": "4.3.6",
+    "jasmine-core": "4.1.1",
+    "karma": "6.3.20",
     "karma-chai": "0.1.0",
-    "karma-chrome-launcher": "3.0.0",
-    "karma-firefox-launcher": "1.1.0",
-    "karma-jasmine": "2.0.1",
-    "karma-mocha": "1.3.0",
-    "karma-qunit": "3.1.2",
+    "karma-chrome-launcher": "3.1.1",
+    "karma-firefox-launcher": "2.1.2",
+    "karma-jasmine": "5.0.1",
+    "karma-mocha": "2.0.1",
+    "karma-qunit": "4.1.2",
     "karma-safari-launcher": "1.0.0",
-    "mocha": "6.1.4",
-    "qunit": "2.9.2",
-    "standard": "13.0.2"
+    "mocha": "10.0.0",
+    "qunit": "2.19.1",
+    "standard": "17.0.0"
   }
 }

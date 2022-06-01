@@ -25,19 +25,37 @@
   },
   "github": "https://github.com/prantlf/karma-failure-snapshots",
   "files": [
-    "lib",
-    "LICENSE",
-    "README.md"
+    "lib"
   ],
+  "engines": {
+    "node": ">= 12"
+  },
   "scripts": {
     "test": "standard --fix --verbose"
   },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/github",
+        {
+          "failComment": false
+        }
+      ],
+      "@semantic-release/git"
+    ]
+  },
   "dependencies": {
-    "handlebars": "4.3.0",
-    "html2canvas": "1.0.0-rc.3"
+    "handlebars": "4.7.7",
+    "html2canvas": "1.4.1"
   },
   "devDependencies": {
-    "fs-extra": "8.1.0",
-    "standard": "14.3.1"
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "fs-extra": "10.1.0",
+    "standard": "17.0.0"
   }
 }
