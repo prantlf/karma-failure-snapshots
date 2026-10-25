@@ -1,6 +1,6 @@
 {
   "name": "karma-failure-snapshots",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Karma plugin for taking snapshots of the web browser whenever a test fails.",
   "keywords": [
     "karma-adapter",

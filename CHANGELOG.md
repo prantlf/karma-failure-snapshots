@@ -1,5 +1,11 @@
 # Changes
 
+# [1.1.0](https://github.com/prantlf/karma-failure-snapshots/compare/v1.0.0...v1.1.0) (2026-10-25)
+
+## Features
+
+* Upgrade and reduce dependencies ([b8e1715](https://github.com/prantlf/karma-failure-snapshots/commit/b8e17159c523f51c6901cbc84784fc0bae5931c8))
+
 # [1.0.0](https://github.com/prantlf/karma-failure-snapshots/compare/v0.0.3...v1.0.0) (2022-06-01)
 
 ### Bug Fixes
