@@ -10,9 +10,7 @@
       "name": "Launch Program",
       "program": "${workspaceFolder}/example/node_modules/karma/bin/karma",
       "cwd": "${workspaceFolder}/example/test-jasmine",
-      "args": [
-        "start"
-      ]
+      "args": ["start"]
     }
   ]
 }

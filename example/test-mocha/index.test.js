@@ -1,6 +1,6 @@
 /* global describe, it, before, after, expect */
 
-function crash () {
+function crash() {
   throw new Error('Crashing...')
 }
 
@@ -25,18 +25,22 @@ describe('answerEverything', function () {
   })
 
   it('answers concisely (fails asynchronously)', function (done) {
-    setTimeout(function () {
-      expect(this.answer.length).to.be.below(3)
-      done()
-    }.bind(this))
+    setTimeout(
+      function () {
+        expect(this.answer.length).to.be.below(3)
+        done()
+      }.bind(this)
+    )
   })
 
   it('answers understandably (throws asynchronously)', function (done) {
-    setTimeout(function () {
-      expect(this.answer).to.match(/\d+/)
-      crash()
-      done()
-    }.bind(this))
+    setTimeout(
+      function () {
+        expect(this.answer).to.match(/\d+/)
+        crash()
+        done()
+      }.bind(this)
+    )
   })
 
   it('answers concretely (fails)', function () {

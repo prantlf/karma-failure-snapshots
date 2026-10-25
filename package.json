@@ -1,61 +1,44 @@
 {
   "name": "karma-failure-snapshots",
   "version": "1.0.0",
-  "main": "lib/index.js",
   "description": "Karma plugin for taking snapshots of the web browser whenever a test fails.",
+  "keywords": [
+    "karma-adapter",
+    "karma-plugin",
+    "screenshots",
+    "snapshots"
+  ],
+  "homepage": "https://github.com/prantlf/karma-failure-snapshots",
+  "bugs": {
+    "url": "https://github.com/prantlf/karma-failure-snapshots/issues"
+  },
   "license": "MIT",
   "author": {
     "name": "Ferdinand Prantl",
     "email": "prantlf@gmail.com",
     "url": "https://github.com/prantlf"
   },
-  "keywords": [
-    "karma-plugin",
-    "karma-adapter",
-    "snapshots",
-    "screenshots"
-  ],
-  "homepage": "https://github.com/prantlf/karma-failure-snapshots",
   "repository": {
     "type": "git",
     "url": "https://github.com/prantlf/karma-failure-snapshots"
   },
-  "bugs": {
-    "url": "https://github.com/prantlf/karma-failure-snapshots/issues"
-  },
-  "github": "https://github.com/prantlf/karma-failure-snapshots",
   "files": [
     "lib"
   ],
-  "engines": {
-    "node": ">= 12"
-  },
+  "main": "lib/index.js",
   "scripts": {
-    "test": "standard --fix --verbose"
-  },
-  "release": {
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/changelog",
-      "@semantic-release/npm",
-      [
-        "@semantic-release/github",
-        {
-          "failComment": false
-        }
-      ],
-      "@semantic-release/git"
-    ]
+    "test": "oxlint"
   },
   "dependencies": {
-    "handlebars": "4.7.7",
+    "handlebars": "4.7.10",
     "html2canvas": "1.4.1"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.1",
-    "@semantic-release/git": "^10.0.1",
-    "fs-extra": "10.1.0",
-    "standard": "17.0.0"
-  }
+    "oxfmt": "^0.74.0",
+    "oxlint": "^1.89.0"
+  },
+  "engines": {
+    "node": ">= 12"
+  },
+  "github": "https://github.com/prantlf/karma-failure-snapshots"
 }

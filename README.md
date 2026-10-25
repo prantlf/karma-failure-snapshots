@@ -1,7 +1,7 @@
 # karma-failure-snapshots
 
 [![Latest version](https://img.shields.io/npm/v/karma-failure-snapshots)
- ![Dependency status](https://img.shields.io/librariesio/release/npm/karma-failure-snapshots)
+![Dependency status](https://img.shields.io/librariesio/release/npm/karma-failure-snapshots)
 ](https://www.npmjs.com/package/karma-failure-snapshots)
 
 [Karma] plugin for taking snapshots of the web browser state whenever a test fails.
@@ -48,9 +48,9 @@ This plugin has to be aded to the `frameworks` array in the Karma configuration 
 
     frameworks: [ 'failure-snapshots', ... ],
 
-You will add it with an additional plugin supporting your unit test framework, which you will place in front of it. The specific plugins have the naming convention `failure-snapshots-<framework>`. When you add other karma framework plugins to support your unit test framework, make sure, that you *place the failure snapshot plugins before them*. For example, a typical configuration for `mocha`:
+You will add it with an additional plugin supporting your unit test framework, which you will place in front of it. The specific plugins have the naming convention `failure-snapshots-<framework>`. When you add other karma framework plugins to support your unit test framework, make sure, that you _place the failure snapshot plugins before them_. For example, a typical configuration for `mocha`:
 
-    module.exports = function (config) {
+    export default function (config) {
       config.set({
         frameworks: [
           'failure-snapshots-mocha', 'failure-snapshots', 'mocha', 'chai'
@@ -65,7 +65,7 @@ The failure snapshot plugins extend the unit test framework and that is why it h
 
 The plugin supports a few options to customize the location to save the snapshots too and other parameters. The following are the defaults:
 
-    module.exports = function (config) {
+    export default function (config) {
       config.set({
         ...,
         // Configure the server-side of the plugin
@@ -86,13 +86,13 @@ The plugin supports a few options to customize the location to save the snapshot
       })
     }
 
-| Option                | Default    | Descripton |
-| :-------------------- | :--------- | :--------- |
-| `failuresDirectory`   | "failures" | Snapshots and the summary will be written there. It will be cleared on each test run. |
-| `snapshotNamePadding` | 4          | Length of the snapshot file name, left-padded by zeros. Snapshots are numbered from one by incrementing a counter. |
-| `summaryTemplate`     | `null`     | File with a Handlebars template of the summary page. See the [built-in page] for more information. |
-| `browserDirectory`    | `true`     | Create a sub-directory for each browser inside `failuresDirectory` |
-| `includePassed`       | `false`    | Can enable taking snapshots of passing tests too. Probably for experimental purposes. |
+| Option                | Default    | Descripton                                                                                                                                                                                              |
+| :-------------------- | :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `failuresDirectory`   | "failures" | Snapshots and the summary will be written there. It will be cleared on each test run.                                                                                                                   |
+| `snapshotNamePadding` | 4          | Length of the snapshot file name, left-padded by zeros. Snapshots are numbered from one by incrementing a counter.                                                                                      |
+| `summaryTemplate`     | `null`     | File with a Handlebars template of the summary page. See the [built-in page] for more information.                                                                                                      |
+| `browserDirectory`    | `true`     | Create a sub-directory for each browser inside `failuresDirectory`                                                                                                                                      |
+| `includePassed`       | `false`    | Can enable taking snapshots of passing tests too. Probably for experimental purposes.                                                                                                                   |
 | `hideFunctionsFrom`   | `null`     | Array of file names to ignore from stacktraces formatted by the unit test framework. Framework plugins supply this value, but you might have a custom one, or you might want to omit more stack frames. |
 
 ## Writing Tests
@@ -160,8 +160,8 @@ The `ensureFailureSnapshot` will take a failure snapshot only if there is a fail
 
 A failure snapshot consists the following two parts:
 
-* *Snapshot* - document content of the current window (content of the `<html>` element)
-* *Screenshot* - picture of the current window (content of the `<body>` element)
+- _Snapshot_ - document content of the current window (content of the `<html>` element)
+- _Screenshot_ - picture of the current window (content of the `<body>` element)
 
 All failure snapshots are stored in a directory with a summary. The summary is a HTML page listing all failed tests and linking them to their failure snapshots. It includes messages and stacktraces too.
 
@@ -206,7 +206,7 @@ Returns a promise to an object, which is supposed o pass to the `data` argument 
 
 ## Contributing
 
-In lieu of a formal styleguide, take care to maintain the existing coding style.  Add unit tests for any new or changed functionality. Lint and test your code using Grunt.
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using Grunt.
 
 ## License
 

@@ -1,6 +1,6 @@
 /* global QUnit */
 
-function crash () {
+function crash() {
   throw new Error('Crashing...')
 }
 

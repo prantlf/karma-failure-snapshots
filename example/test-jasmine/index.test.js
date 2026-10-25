@@ -1,6 +1,6 @@
 /* global describe, it, beforeAll, afterAll, expect */
 
-function crash () {
+function crash() {
   throw new Error('Crashing...')
 }
 
@@ -25,18 +25,22 @@ describe('answerEverything', function () {
   })
 
   it('answers concisely', function (done) {
-    setTimeout(function () {
-      expect(this.answer.length).toBeLessThan(3)
-      done()
-    }.bind(this))
+    setTimeout(
+      function () {
+        expect(this.answer.length).toBeLessThan(3)
+        done()
+      }.bind(this)
+    )
   })
 
   it('answers understandably', function (done) {
-    setTimeout(function () {
-      expect(this.answer).toMatch(/\d+/)
-      crash()
-      done()
-    }.bind(this))
+    setTimeout(
+      function () {
+        expect(this.answer).toMatch(/\d+/)
+        crash()
+        done()
+      }.bind(this)
+    )
   })
 
   it('answers concretely', function () {
