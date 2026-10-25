@@ -210,7 +210,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## License
 
-Copyright (c) 2019-2022 Ferdinand Prantl
+Copyright (c) 2019-2026 Ferdinand Prantl
 
 Licensed under the MIT license.
 
